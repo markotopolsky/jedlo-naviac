@@ -16,7 +16,7 @@ const mobileOpen = ref(false)
   <header class="fixed h-[90px] flex flex-col justify-center top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
     <div class="container mx-auto flex items-center justify-between px-4">
       <a href="#" class="font-heading text-3xl font-extrabold text-primary">
-        Jedlo naviac
+        Jedlo naviac maliny gerko
       </a>
 
       <!-- Desktop nav -->
