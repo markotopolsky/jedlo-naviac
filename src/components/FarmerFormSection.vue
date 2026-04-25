@@ -5,10 +5,11 @@ import { z } from 'zod'
 const farmerSchema = z.object({
   name: z.string().trim().min(1, 'Meno je povinné').max(100),
   email: z.string().trim().email('Zadajte platný email').max(255),
+  phone: z.string().trim().min(1, 'Telefónne číslo je povinné').max(20),
   message: z.string().trim().min(1, 'Správa je povinná').max(2000),
 })
 
-const form = reactive({ name: '', email: '', message: '' })
+const form = reactive({ name: '', email: '', phone: '', message: '' })
 const errors = ref({})
 const submitted = ref(false)
 const submitError = ref('')
@@ -38,6 +39,7 @@ const handleSubmit = async () => {
       body: JSON.stringify({
         name: form.name,
         email: form.email,
+        phone: form.phone,
         message: form.message,
       }),
     })
@@ -50,6 +52,7 @@ const handleSubmit = async () => {
     submitted.value = true
     form.name = ''
     form.email = ''
+    form.phone = ''
     form.message = ''
   } catch (_err) {
     submitError.value = 'Spravu sa nepodarilo odoslat. Skuste to prosim znova.'
@@ -97,6 +100,16 @@ const handleSubmit = async () => {
               placeholder="vas@email.sk"
             />
             <p v-if="errors.email" class="text-destructive text-sm mt-1">{{ errors.email }}</p>
+          </div>
+          <div>
+            <label class="font-body text-lg font-medium text-foreground block mb-1.5">Telefónne číslo</label>
+            <input
+              v-model="form.phone"
+              type="tel"
+              class="w-full px-4 py-3 rounded-lg border border-input bg-background font-body text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              placeholder="+421 900 000 000"
+            />
+            <p v-if="errors.phone" class="text-destructive text-sm mt-1">{{ errors.phone }}</p>
           </div>
           <div>
             <label class="font-body text-lg font-medium text-foreground block mb-1.5">Správa</label>
