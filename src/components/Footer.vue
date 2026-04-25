@@ -1,5 +1,6 @@
 <script setup>
 import { Instagram, Youtube } from 'lucide-vue-next'
+import white_logo from '@/assets/icon_mix.png'
 </script>
 
 <template>
@@ -7,9 +8,9 @@ import { Instagram, Youtube } from 'lucide-vue-next'
     <div class="container mx-auto px-4">
       <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mb-10">
         <div>
-          <p class="font-heading text-2xl font-extrabold text-primary-foreground mb-4"> Jedlo naviac</p>
+          <img :src="white_logo" alt="Jedlo naviac" class="h-16 mb-4" />
           <p class="font-body text-lg text-primary-foreground/60">
-            Najdostupnejšie ovocie a zelenina v meste.
+            Najdostupnejšie ovocie a zelenina v meste
           </p>
         </div>
         <div>

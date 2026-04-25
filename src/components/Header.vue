@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import { Menu, X } from 'lucide-vue-next'
+import logo from '@/assets/icon.png'
 
 const navItems = [
   { label: 'O nás', href: '#preco-my' },
@@ -15,9 +16,9 @@ const mobileOpen = ref(false)
 <template>
   <header class="fixed h-[90px] flex flex-col justify-center top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
     <div class="container mx-auto flex items-center justify-between px-4">
-      <a href="#" class="font-heading text-3xl font-extrabold text-primary">
-        Jedlo naviac maliny gerko
-      </a>
+      <a href="#">
+        <img :src="logo" alt="Jedlo naviac" class="h-12" />
+      </a>  
 
       <!-- Desktop nav -->
       <nav class="hidden md:flex items-center gap-8">

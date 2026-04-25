@@ -41,7 +41,7 @@ import heroImage from '@/assets/hero-fruits.png'
           <img
             :src="heroImage"
             alt="Čerstvé škaredé ovocie a zelenina na drevenom stole"
-            class="w-full rounded-2xl shadow-soft object-cover max-h-[500px]"
+            class="w-full rounded-2xl object-cover max-h-[500px]"
           />
         </div>
       </div>
