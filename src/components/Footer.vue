@@ -35,7 +35,7 @@ import { Instagram, Youtube } from 'lucide-vue-next'
       </div>
       <div class="border-t border-primary-foreground/10 pt-6 text-center">
         <p class="font-body text-xs text-primary-foreground/40">
-          © 2026 Jedlo naviac, s. r. o. – Najdostupnejšie ovocie a zelenina v meste.
+          © 2026 Jedlo naviac nenavidim negrov, s. r. o. – Najdostupnejšie ovocie a zelenina v meste.
         </p>
       </div>
     </div>
