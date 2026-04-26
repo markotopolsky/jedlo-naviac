@@ -13,9 +13,9 @@ app.get('/api/health', (_req, res) => {
 })
 
 app.post('/api/send-email', async (req, res) => {
-  const { name, email, message } = req.body ?? {}
+  const { name, email, phone, message } = req.body ?? {}
 
-  if (!name || !email || !message) {
+  if (!name || !email || !phone || !message) {
     return res.status(400).json({ error: 'Missing required fields.' })
   }
 
@@ -24,7 +24,7 @@ app.post('/api/send-email', async (req, res) => {
     to: [process.env.RESEND_TO_EMAIL],
     subject: `Nova sprava od farmara: ${name}`,
     reply_to: email,
-    text: `Meno: ${name}\nEmail: ${email}\n\nSprava:\n${message}`,
+    text: `Meno: ${name}\nEmail: ${email}\nTelefon: ${phone}\n\nSprava:\n${message}`,
   })
 
   if (error) {

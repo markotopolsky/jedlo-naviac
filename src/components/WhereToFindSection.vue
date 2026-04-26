@@ -1,5 +1,7 @@
 <script setup>
 import { MapPin } from 'lucide-vue-next'
+import woltIcon from '@/assets/wolt_icon.png'
+import boltIcon from '@/assets/bolt_icon.png'
 </script>
 
 <template>
@@ -21,17 +23,17 @@ import { MapPin } from 'lucide-vue-next'
               href="https://wolt.com"
               target="_blank"
               rel="noopener noreferrer"
-              class="bg-accent text-accent-foreground text-xl font-heading font-bold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
+              class="hover:opacity-90 transition-opacity"
             >
-              Wolt
+              <img :src="woltIcon" alt="Wolt" class="w-[100px] h-[100px] object-contain" />
             </a>
             <a
               href="https://food.bolt.eu"
               target="_blank"
               rel="noopener noreferrer"
-              class="bg-primary text-primary-foreground text-xl font-heading font-bold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
+              class="hover:opacity-90 transition-opacity"
             >
-              Bolt Food
+              <img :src="boltIcon" alt="Bolt Food" class="w-[100px] h-[100px] object-contain" />
             </a>
           </div>
         </div>
@@ -43,7 +45,7 @@ import { MapPin } from 'lucide-vue-next'
             <span class="font-body text-sm text-muted-foreground">Hálova 16, 851 01 Petržalka</span>
           </div>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2663.5!2d17.1!3d48.12!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDA3JzEyLjAiTiAxN8KwMDYnMDAuMCJF!5e0!3m2!1ssk!2ssk!4v1600000000000!5m2!1ssk!2ssk"
+            src="https://maps.google.com/maps?q=Stredn%C3%A1%20priemyseln%C3%A1%20%C5%A1kola%20elektrotechnick%C3%A1%2C%20H%C3%A1lova%2016&t=m&z=17&output=embed&iwloc=near"
             width="100%"
             height="250"
             style="border: 0"

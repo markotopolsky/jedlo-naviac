@@ -75,48 +75,48 @@ const handleSubmit = async () => {
 
         <!-- Po odoslaní -->
         <div v-if="submitted" class="text-center py-8">
-          <p class="font-heading text-xl font-bold text-primary mb-2">Ďakujeme za správu!</p>
-          <p class="font-body text-muted-foreground">Ozveme sa vám čo najskôr.</p>
+          <p class="font-heading text-2xl font-bold text-primary mb-2">Ďakujeme za správu!</p>
+          <p class="font-body text-lg text-muted-foreground">Ozveme sa vám čo najskôr.</p>
         </div>
 
         <!-- Formulár -->
         <form v-else @submit.prevent="handleSubmit" class="space-y-5">
           <div>
-            <label class="font-body text-lg font-medium text-foreground block mb-1.5">Meno</label>
+            <label class="font-body text-xl font-medium text-foreground block mb-1.5">Meno</label>
             <input
               v-model="form.name"
               type="text"
-              class="w-full px-4 py-3 rounded-lg border border-input bg-background font-body text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-4 py-3 rounded-lg border border-input bg-background font-body text-foreground text-lg focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="Vaše meno"
             />
             <p v-if="errors.name" class="text-destructive text-sm mt-1">{{ errors.name }}</p>
           </div>
           <div>
-            <label class="font-body text-lg font-medium text-foreground block mb-1.5">Email</label>
+            <label class="font-body text-xl font-medium text-foreground block mb-1.5">Email</label>
             <input
               v-model="form.email"
               type="email"
-              class="w-full px-4 py-3 rounded-lg border border-input bg-background font-body text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-4 py-3 rounded-lg border border-input bg-background font-body text-foreground text-lg focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="vas@email.sk"
             />
             <p v-if="errors.email" class="text-destructive text-sm mt-1">{{ errors.email }}</p>
           </div>
           <div>
-            <label class="font-body text-lg font-medium text-foreground block mb-1.5">Telefónne číslo</label>
+            <label class="font-body text-xl font-medium text-foreground block mb-1.5">Telefónne číslo</label>
             <input
               v-model="form.phone"
               type="tel"
-              class="w-full px-4 py-3 rounded-lg border border-input bg-background font-body text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-4 py-3 rounded-lg border border-input bg-background font-body text-foreground text-lg focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="+421 900 000 000"
             />
             <p v-if="errors.phone" class="text-destructive text-sm mt-1">{{ errors.phone }}</p>
           </div>
           <div>
-            <label class="font-body text-lg font-medium text-foreground block mb-1.5">Správa</label>
+            <label class="font-body text-xl font-medium text-foreground block mb-1.5">Správa</label>
             <textarea
               v-model="form.message"
               rows="4"
-              class="w-full px-4 py-3 rounded-lg border border-input bg-background font-body text-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
+              class="w-full px-4 py-3 rounded-lg border border-input bg-background font-body text-foreground text-lg focus:outline-none focus:ring-2 focus:ring-ring resize-none"
               placeholder="Popíšte vašu ponuku..."
             />
             <p v-if="errors.message" class="text-destructive text-lg mt-1">{{ errors.message }}</p>

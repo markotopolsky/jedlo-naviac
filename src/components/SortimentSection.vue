@@ -23,7 +23,7 @@ import { Apple, ShoppingBasket, Instagram } from 'lucide-vue-next'
           </p>
           <div class="border-t border-border pt-6">
             <p class="font-body text-sm text-muted-foreground flex items-center justify-center gap-2">
-              <Instagram :size="16" class="text-primary" />
+              <Instagram :size="16" class="text-primary flex-shrink-0" />
               Ponuka sa mení podľa toho, čo práve dozrieva na poliach. Sledujte nás na Instagrame!
             </p>
           </div>
