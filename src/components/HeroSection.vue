@@ -5,15 +5,8 @@ import heroImage from '@/assets/hero-fruits.png'
 <template>
   <section class="bg-hero-gradient pt-28 pb-16 md:pt-36 md:pb-24">
     <div class="container mx-auto px-4">
-      <div class="flex flex-col items-center gap-12">
-        <div class="w-full">
-          <img
-            :src="heroImage"
-            alt="Čerstvé škaredé ovocie a zelenina na drevenom stole"
-            class="w-full rounded-2xl object-cover max-h-[500px]"
-          />
-        </div>
-        <div class="animate-fade-in-up text-center max-w-2xl">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="animate-fade-in-up order-2 md:order-1">
           <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground leading-tight mb-6">
             Zachraňujeme jedlo, ktoré by inak skončilo
             <span class="text-gradient-primary">
@@ -22,10 +15,10 @@ import heroImage from '@/assets/hero-fruits.png'
               </br>
             </span>
           </h1>
-          <p class="font-body text-2xl text-muted-foreground mb-8">
+          <p class="font-body text-2xl text-muted-foreground mb-8 max-w-lg">
             Čerstvé ovocie a zelenina od lokálnych farmárov. Bez estetických chýb, no plné chuti. Doručíme až k vám cez Wolt a Bolt.
           </p>
-          <div class="flex flex-wrap justify-center gap-4">
+          <div class="flex flex-wrap gap-4">
             <a
               href="https://wolt.com"
               target="_blank"
@@ -43,6 +36,13 @@ import heroImage from '@/assets/hero-fruits.png'
               Objednaj cez Bolt Food
             </a>
           </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <img
+            :src="heroImage"
+            alt="Čerstvé škaredé ovocie a zelenina na drevenom stole"
+            class="w-full rounded-2xl object-cover max-h-[500px]"
+          />
         </div>
       </div>
     </div>
